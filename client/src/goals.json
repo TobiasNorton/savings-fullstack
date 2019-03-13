@@ -1,0 +1,38 @@
+[
+  {
+    "goal name": "Gibson Les Paul",
+    "goal amount": 4500,
+    "balance": 600,
+    "deadline": "September 10, 2019"
+  },
+  {
+    "goal name": "Fender Telecaster",
+    "goal amount": 1500,
+    "balance": 200,
+    "deadline": "December 15, 2019"
+  },
+  {
+    "goal name": "Thailand, Cambodia",
+    "goal amount": 4500,
+    "balance": 500,
+    "deadline": "January 20, 2020"
+  },
+  {
+    "goal name": "Scotland, Ireland, UK",
+    "goal amount": 6000,
+    "balance": 1250,
+    "deadline": "April 14, 2020"
+  },
+  {
+    "goal name": "New Backpack",
+    "goal amount": 600,
+    "balance": 0,
+    "deadline": "August 15, 2019"
+  },
+  {
+    "goal name": "Fender Stratocaster",
+    "goal amount": 1800,
+    "balance": 3,
+    "deadline": "November 17, 2019"
+  }
+]
