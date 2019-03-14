@@ -12,7 +12,7 @@ class GoalItem extends Component {
         <td>{this.props.name}</td>
         <td>${this.props.amount}.00</td>
         <td>${this.props.balance}.00</td>
-        <td>{this.props.date}</td>
+        {/* <td>{this.props.date}</td> */}
         <td className="hide-cell">
           <div className="list-buttons">
             <Link to={`/edit/${this.props.id}`} className="edit-button">
