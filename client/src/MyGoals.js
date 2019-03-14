@@ -133,10 +133,10 @@ class MyGoals extends Component {
           <table className="table">
             <thead>
               <tr className="test">
-                <th>Goal</th>
+                <th className="top-left">Goal</th>
                 <th>Amount</th>
                 <th>Current Balance</th>
-                <th>Deadline</th>
+                <th className="top-right" />
               </tr>
             </thead>
 

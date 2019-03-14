@@ -110,12 +110,20 @@ code {
   border-spacing: 0px 3px;
 }
 
+.top-left {
+  border-top-left-radius: 10px;
+}
+
+.top-right {
+  border-top-right-radius: 10px;
+}
+
 th {
   color: white;
   background-color: hsla(211, 30%, 10%, 1);
   background-color: hsla(208, 63%, 45%, 1);
   background-color: hsla(127, 50%, 50%, 1);
-  padding: 0.5rem 0.5rem 0.5rem 1.1rem;
+  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
   text-align: left;
 }
 
@@ -124,7 +132,7 @@ td {
   background-color: hsla(211, 30%, 10%, 1);
   background-color: hsla(208, 63%, 60%, 1);
   background-color: hsla(127, 50%, 80%, 1);
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1.2rem;
 }
 
 .list-buttons {
@@ -174,7 +182,7 @@ td.hide-cell {
   padding: 0.7rem;
   width: 12rem;
   color: white;
-  background-color: black;
+  background-color: hsl(200, 100%, 60%);
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
@@ -224,10 +232,13 @@ input {
 }
 
 .submit {
-  font-size: 1rem;
+  font-size: 1.2rem;
   height: 2rem;
   border-radius: 5px;
   margin: 0.6rem;
+  color: white;
+  background-color: hsl(200, 100%, 60%);
+  border: none;
 }
 
 .edit-goals-container {
