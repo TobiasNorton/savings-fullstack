@@ -218,8 +218,8 @@ input {
   color: white;
   text-align: center;
   text-decoration: none;
-  background-color: black;
-  width: 14rem;
+  background-color: hsla(127, 50%, 50%, 1);
+  width: 20rem;
   padding: 0.7rem;
   margin-bottom: 5px;
   border-radius: 5px;
