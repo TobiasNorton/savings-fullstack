@@ -61,7 +61,7 @@ class EditGoal extends Component {
               />
             </div>
             <div className="input-container">
-              <label>Make a Deposit</label>
+              <label>Update Balance</label>
               <input
                 type="number"
                 name="goal[balance]"

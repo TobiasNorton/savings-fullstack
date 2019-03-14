@@ -10,8 +10,8 @@ class GoalItem extends Component {
     return (
       <tr className="row">
         <td>{this.props.name}</td>
-        <td>{this.props.amount}</td>
-        <td>{this.props.balance}</td>
+        <td>${this.props.amount}.00</td>
+        <td>${this.props.balance}.00</td>
         <td>{this.props.date}</td>
         <td className="hide-cell">
           <div className="list-buttons">
