@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class GoalItem extends Component {
+  delete = () => {
+    this.props.deleteGoal(this.props.id)
+  }
+
   render() {
     return (
       <tr className="row">
@@ -15,7 +19,7 @@ class GoalItem extends Component {
               Edit
             </Link>
             {/* <button onClick={this.goToEdit}>Edit</button> */}
-            <button onClick={this.deleteGoal}>Delete</button>
+            <button onClick={this.delete}>Delete</button>
             {/* <button onClick={() => this.deleteGoal(goal)}>Delete</button> */}
           </div>
         </td>

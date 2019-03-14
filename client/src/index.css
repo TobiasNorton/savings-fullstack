@@ -18,18 +18,19 @@ code {
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: hsla(211, 30%, 10%, 1);
+  background-color: hsla(208, 63%, 45%, 1);
+  background-color: hsla(127, 50%, 50%, 1);
+  padding: 1rem 0;
 }
-
-/* .nav-bar p {
-  color: white;
-} */
 
 .nav-link {
   color: white;
-  padding: 1rem;
+  padding: 0;
   text-decoration: none;
-  background-color: black;
+  background-color: hsla(211, 30%, 10%, 1);
+  background-color: hsla(208, 63%, 45%, 1);
+  background-color: hsla(127, 50%, 50%, 1);
   border: none;
   font-size: 1rem;
 }
@@ -80,9 +81,6 @@ code {
   width: 10rem;
 }
 
-.goal-list-header {
-}
-
 .goals-list {
   display: flex;
   flex-direction: column;
@@ -102,17 +100,23 @@ code {
   width: 90vw;
   max-width: 60rem;
   margin: 0 3rem 2rem 3rem;
-  /* border-collapse: separate;
-  border-spacing: 0px 3px; */
+  border-collapse: separate;
+  border-spacing: 0px 3px;
 }
 
 th {
-  background-color: lightgrey;
+  color: white;
+  background-color: hsla(211, 30%, 10%, 1);
+  background-color: hsla(208, 63%, 45%, 1);
+  background-color: hsla(127, 50%, 50%, 1);
   padding: 1rem;
 }
 
 td {
-  background-color: lightgrey;
+  color: black;
+  background-color: hsla(211, 30%, 10%, 1);
+  background-color: hsla(208, 63%, 60%, 1);
+  background-color: hsla(127, 50%, 70%, 1);
   padding: 1rem;
 }
 

@@ -52,25 +52,28 @@ class MyGoals extends Component {
   }
 
   componentDidMount = () => {
+    // axios.get('/api/goals').then(response => {
+    //   console.log(response.data)
+    //   this.setState(
+    //     {
+    //       goals: response.data
+    //     },
+    //     () => console.log(this.state.goals)
+    //   )
+    // })
+    this.loadGoals()
+  }
+
+  loadGoals = () => {
     axios.get('/api/goals').then(response => {
-      console.log(response.data)
-      this.setState(
-        {
-          goals: response.data
-        },
-        () => console.log(this.state.goals)
-      )
+      this.setState({
+        goals: response.data
+      })
     })
   }
 
   goToEdit = () => {
     window.location = '/edit/:id'
-  }
-
-  deleteGoal = event => {
-    console.log(event.target)
-    // axios.delete(`/api/goal/${this.state.goals}`).then(response => {
-    // })
   }
 
   displayGoals = () => {
@@ -83,23 +86,8 @@ class MyGoals extends Component {
           amount={goal.target_amount}
           balance={goal.balance}
           date={goal.due_date}
+          deleteGoal={this.deleteGoal}
         />
-        // <tr className="row" key={index}>
-        //   <td>{goal.name}</td>
-        //   <td>{goal.target_amount}</td>
-        //   <td>{goal.balance}</td>
-        //   <td>{goal.due_date}</td>
-        //   <td className="hide-cell">
-        //     <div className="list-buttons">
-        //       <Link to="/edit/:id" className="edit-button">
-        //         Edit
-        //       </Link>
-        //       {/* <button onClick={this.goToEdit}>Edit</button> */}
-        //       <button onClick={this.deleteGoal}>Delete</button>
-        //       {/* <button onClick={() => this.deleteGoal(goal)}>Delete</button> */}
-        //     </div>
-        //   </td>
-        // </tr>
       )
     })
   }
@@ -112,6 +100,12 @@ class MyGoals extends Component {
         </>
       )
     }
+  }
+
+  deleteGoal = id => {
+    axios.delete(`/api/goals/${id}`).then(response => {
+      this.loadGoals()
+    })
   }
 
   // goalName = () => {
