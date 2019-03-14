@@ -37,18 +37,12 @@ class EditGoal extends Component {
   render() {
     return (
       <div>
-        {/* <h1 className="title">Personal Savings Goals</h1>
-        <nav className="nav-bar">
-          <p>My Goals</p>
-          <p>New Goal</p>
-          <p>Edit Goals</p>
-        </nav> */}
         <Header />
 
         <section>
           {/* <p className="header">Edit Your Goal</p> */}
           <p className="form-header">Edit Your Goal</p>
-          <form className="new-goal">
+          <form className="new-goal" onSubmit={this.editGoal}>
             <div className="input-container">
               <label>Goal Name</label>
               <input type="text" name="goal[name]" defaultValue={this.state.currentGoal.name} />

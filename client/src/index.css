@@ -55,13 +55,8 @@ code {
   font-size: 3rem;
 }
 
-.welcome-greeting {
-  margin-top: 10rem;
-  font-size: 2rem;
-}
-
 .login-area {
-  background: linear-gradient(hsla(185, 0%, 0%, 0), hsla(185, 0%, 0%, 0)),
+  background: linear-gradient(hsla(185, 0%, 0%, 0.3), hsla(185, 0%, 0%, 0.3)),
     url('./andre-hunter-62014-unsplash.jpg');
   background-size: cover;
   background-position: center;
@@ -71,13 +66,24 @@ code {
   align-items: center;
 }
 
-.login-button {
+.tagline {
+  color: white;
+  margin-top: 16rem;
+  font-size: 2rem;
+}
+
+.login-area p {
+  color: white;
+}
+
+.login-area button {
   font-size: 1rem;
-  color: black;
-  border: 1px solid black;
+  color: white;
+  border: none;
   border-radius: 5px;
-  background-color: hsla(185, 0%, 100%, 0.3);
+  background-color: hsl(200, 100%, 60%);
   padding: 0.5rem;
+  margin: 0 0.7rem;
   width: 10rem;
 }
 
@@ -131,23 +137,28 @@ td {
 .list-buttons button {
   /* margin-left: 1rem;
   margin-right: 1rem; */
+  color: hsla(127, 0%, 50%, 1);
   font-size: 0.8rem;
   margin: 0 0.5rem 0 0.5rem;
   background-color: hsla(127, 0%, 100%, 1);
-  border: 1px solid hsla(127, 0%, 80%, 1);
+  border: 1px solid hsla(127, 0%, 70%, 1);
   border-radius: 5px;
   width: 4rem;
   height: 1.5rem;
 }
 
+.list-buttons button:hover {
+  cursor: pointer;
+}
+
 .edit-button {
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: hsla(127, 0%, 50%, 1);
   font-size: 0.8rem;
   margin: 0 0.5rem 0 0.5rem;
   background-color: hsla(127, 0%, 100%, 1);
-  border: 1px solid hsla(127, 0%, 80%, 1);
+  border: 1px solid hsla(127, 0%, 70%, 1);
   border-radius: 5px;
   width: 4rem;
   /* height: 2rem; */

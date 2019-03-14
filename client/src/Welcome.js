@@ -13,11 +13,11 @@ class Welcome extends Component {
           </nav> */}
         </div>
         <section className="login-area">
-          <p className="welcome-greeting">Dream Big. Save Now.</p>
+          <p className="tagline">Dream Big. Save Now.</p>
           <p>Please Log In or Sign Up to Continue</p>
           <div>
-            <button className="login-button">Log In</button>
-            <button className="login-button">Sign Up</button>
+            <button>Log In</button>
+            <button>Sign Up</button>
           </div>
         </section>
       </div>
