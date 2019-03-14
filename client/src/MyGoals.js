@@ -36,13 +36,10 @@ class MyGoals extends Component {
     })
   }
 
-  goToEdit = () => {
-    window.location = '/edit/:id'
-  }
-
-  lastRow = () => {
-    return this.state.goals.filter
-  }
+  // lastRow = () => {
+  //   let goals = this.state.goals
+  //   for
+  // }
 
   displayGoals = () => {
     return this.state.goals.map((goal, index) => {
@@ -55,7 +52,7 @@ class MyGoals extends Component {
           balance={goal.balance}
           date={goal.due_date}
           deleteGoal={this.deleteGoal}
-          className={this.lastRow}
+          class={this.lastRow}
         />
       )
     })

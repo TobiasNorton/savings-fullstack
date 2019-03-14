@@ -8,7 +8,7 @@ class GoalItem extends Component {
 
   render() {
     return (
-      <tr className="row">
+      <tr className={`row ${this.props.class}`}>
         <td>{this.props.name}</td>
         <td>${this.props.amount}.00</td>
         <td>${this.props.balance}.00</td>

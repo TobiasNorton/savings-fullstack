@@ -29,9 +29,9 @@ class EditGoal extends Component {
       console.log(pair[0] + ', ' + pair[1])
     }
 
-    axios.put(`/api/goals/${this.state.currentGoal.id}`, formData).then(response => {})
-
-    window.location = '/goals'
+    axios.put(`/api/goals/${this.state.currentGoal.id}`, formData).then(response => {
+      window.location = '/goals'
+    })
   }
 
   render() {
@@ -76,7 +76,7 @@ class EditGoal extends Component {
                 defaultValue={this.state.currentGoal.due_date}
               />
             </div> */}
-            <button onClick={this.editGoal} type="submit" className="submit">
+            <button type="submit" className="submit">
               Submit
             </button>
           </form>
