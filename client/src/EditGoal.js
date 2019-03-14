@@ -68,14 +68,14 @@ class EditGoal extends Component {
                 defaultValue={this.state.currentGoal.balance}
               />
             </div>
-            <div className="input-container">
+            {/* <div className="input-container">
               <label>Deadline</label>
               <input
                 type="date"
                 name="goal[due_date]"
                 defaultValue={this.state.currentGoal.due_date}
               />
-            </div>
+            </div> */}
             <button onClick={this.editGoal} type="submit" className="submit">
               Submit
             </button>
