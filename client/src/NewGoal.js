@@ -23,7 +23,8 @@ class NewGoal extends Component {
       <div>
         <Header />
         <section>
-          <p className="header">Create a New Goal</p>
+          {/* <p className="header">Create a New Goal</p> */}
+          <p className="form-header">Create a New Goal</p>
           <form className="new-goal" onSubmit={this.createGoal}>
             <div className="input-container">
               <label>Goal Name</label>

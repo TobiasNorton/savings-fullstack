@@ -46,7 +46,8 @@ class EditGoal extends Component {
         <Header />
 
         <section>
-          <p className="header">Edit Your Goal</p>
+          {/* <p className="header">Edit Your Goal</p> */}
+          <p className="form-header">Edit Your Goal</p>
           <form className="new-goal">
             <div className="input-container">
               <label>Goal Name</label>
