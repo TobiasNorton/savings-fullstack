@@ -45,7 +45,12 @@ class EditGoal extends Component {
           <form className="new-goal" onSubmit={this.editGoal}>
             <div className="input-container">
               <label>Goal Name</label>
-              <input type="text" name="goal[name]" defaultValue={this.state.currentGoal.name} />
+              <input
+                type="text"
+                name="goal[name]"
+                defaultValue={this.state.currentGoal.name}
+                autoComplete="off"
+              />
             </div>
             <div className="input-container">
               <label>Amount</label>

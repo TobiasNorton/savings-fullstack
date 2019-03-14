@@ -28,10 +28,15 @@ class NewGoal extends Component {
           <form className="new-goal" onSubmit={this.createGoal}>
             <div className="input-container">
               <label>Goal Name</label>
-              <input type="text" name="goal[name]" maxlength="22" />
+              <input type="text" name="goal[name]" maxLength="22" autoComplete="off" />
             </div>
             <div className="input-container">
               <label>Amount</label>
+              {/* <div className="currency">
+                <p>$</p>
+                <input type="number" name="goal[target_amount]" min="1" max="9999999" />
+                <p>.00</p>
+              </div> */}
               <input type="number" name="goal[target_amount]" min="1" max="9999999" />
             </div>
             <div className="input-container">
