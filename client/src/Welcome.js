@@ -16,7 +16,7 @@ class Welcome extends Component {
         </div>
         <section className="login-area">
           <p className="tagline">Dream Big. Save Now.</p>
-          <p>Please Log In or Sign Up to Continue</p>
+          <p className="please-login">Please Log In or Sign Up to Continue</p>
           <div>
             <button>Log In</button>
             <button>Sign Up</button>
