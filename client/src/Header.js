@@ -44,7 +44,9 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <h1 className="title">StashFlow</h1>
+        <h1 className="title">
+          StashFlow <i class="fas fa-money-bill-wave" />
+        </h1>
         <nav className="nav-bar">
           <Link to="/goals" className="nav-link">
             My Goals

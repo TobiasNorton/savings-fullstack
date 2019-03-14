@@ -5,7 +5,9 @@ class Welcome extends Component {
     return (
       <div className="welcome">
         <div>
-          <h1 className="title">StashFlow</h1>
+          <h1 className="title">
+            StashFlow <i class="fas fa-money-bill-wave" />
+          </h1>
           {/* <nav className="nav-bar">
             <p>My Goals</p>
             <p>New Goal</p>
