@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import axios from 'axios'
+import auth from './auth'
 
 class EditGoal extends Component {
   constructor(props) {
@@ -8,6 +9,14 @@ class EditGoal extends Component {
 
     this.state = {
       currentGoal: {}
+    }
+  }
+
+  componentWillMount() {
+    if (auth.isAuthenticated()) {
+      axios.defaults.headers.common = {
+        Authorization: auth.authorizationHeader()
+      }
     }
   }
 

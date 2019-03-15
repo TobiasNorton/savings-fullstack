@@ -4,6 +4,7 @@ import Header from './Header'
 import GoalItem from './GoalItem'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import auth from './auth'
 
 class MyGoals extends Component {
   constructor(props) {
@@ -12,6 +13,14 @@ class MyGoals extends Component {
     this.state = {
       goals: [],
       lastRow: false
+    }
+  }
+
+  componentWillMount() {
+    if (auth.isAuthenticated()) {
+      axios.defaults.headers.common = {
+        Authorization: auth.authorizationHeader()
+      }
     }
   }
 
