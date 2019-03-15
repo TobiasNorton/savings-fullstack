@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import './App.css'
 import { Router, Route } from 'react-router-dom'
 import Welcome from './Welcome'
-// import Home from './Home'
 import NewGoal from './NewGoal'
 import MyGoals from './MyGoals'
 import EditGoal from './EditGoal'
 import ChooseGoal from './ChooseGoal'
+import axios from 'axios'
 
 import auth from './auth'
 import history from './history'
@@ -29,11 +29,10 @@ class App extends Component {
             render={() => {
               auth.handleAuthentication(() => {
                 // NOTE: Uncomment the following lines if you are using axios
-                //
                 // Set the axios authentication headers
-                // axios.defaults.headers.common = {
-                //   Authorization: auth.authorizationHeader()
-                // }
+                axios.defaults.headers.common = {
+                  Authorization: auth.authorizationHeader()
+                }
               })
               return <></>
             }}

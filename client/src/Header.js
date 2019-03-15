@@ -55,7 +55,7 @@ class Header extends Component {
     return (
       <div>
         <h1 className="title">
-          StashFlow <i class="fas fa-money-bill-wave" />
+          GreenGoals <i class="fas fa-money-bill-wave" />
         </h1>
         <nav className="nav-bar">
           <Link to="/goals" className="nav-link">
