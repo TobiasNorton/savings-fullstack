@@ -1,7 +1,7 @@
 import auth0 from 'auth0-js'
 import history from './history'
-const DOMAIN = 'OURAPP.auth0.com'
-const CLIENTID = 'xxxxxxxxx'
+const DOMAIN = 'tobiasnorton.auth0.com'
+const CLIENTID = 'E7rqT5dNMgDfdrUfnVIpGPnX7EQHXrnN'
 class Auth {
   userProfile
   auth0 = new auth0.WebAuth({
@@ -26,7 +26,7 @@ class Auth {
     localStorage.removeItem('id_token')
     localStorage.removeItem('expires_at')
     // navigate to the home route
-    history.replace('/')
+    history.replace('/goals')
   }
   handleAuthentication(callback) {
     this.auth0.parseHash((err, authResult) => {
@@ -35,9 +35,9 @@ class Auth {
         if (callback) {
           callback()
         }
-        history.replace('/')
+        history.replace('/goals')
       } else if (err) {
-        history.replace('/')
+        history.replace('/goals')
         console.log(err)
       }
     })

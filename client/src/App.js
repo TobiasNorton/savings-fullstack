@@ -28,7 +28,6 @@ class App extends Component {
             path="/callback"
             render={() => {
               auth.handleAuthentication(() => {
-                // NOTE: Uncomment the following lines if you are using axios
                 // Set the axios authentication headers
                 axios.defaults.headers.common = {
                   Authorization: auth.authorizationHeader()
