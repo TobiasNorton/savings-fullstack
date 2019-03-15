@@ -12,7 +12,8 @@ class MyGoals extends Component {
 
     this.state = {
       goals: [],
-      lastRow: false
+      lastRow: false,
+      loading: true
     }
   }
 
@@ -64,7 +65,7 @@ class MyGoals extends Component {
     if (this.state.goals.length === 0) {
       return (
         <>
-          <p>You have no current goals.</p>
+          <div className="no-goals">You have no current goals.</div>
         </>
       )
     }
@@ -86,6 +87,10 @@ class MyGoals extends Component {
   //     )
   //   })
   // }
+
+  renderLoading = () => {
+    return <div className="no-goals">Loading...</div>
+  }
 
   render() {
     return (

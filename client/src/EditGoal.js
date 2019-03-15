@@ -61,6 +61,7 @@ class EditGoal extends Component {
                 type="text"
                 name="goal[name]"
                 defaultValue={this.state.currentGoal.name}
+                maxLength="20"
                 autoComplete="off"
               />
             </div>
