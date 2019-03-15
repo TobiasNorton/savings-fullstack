@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import data from './goals.json'
 import Header from './Header'
 import GoalItem from './GoalItem'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import auth from './auth'
+import history from './history'
 
 class MyGoals extends Component {
   constructor(props) {
@@ -21,6 +21,8 @@ class MyGoals extends Component {
       axios.defaults.headers.common = {
         Authorization: auth.authorizationHeader()
       }
+    } else {
+      history.push('/')
     }
   }
 

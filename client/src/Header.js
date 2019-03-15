@@ -41,7 +41,7 @@ class Header extends Component {
         <div className="dropdown">
           {this.state.goals.map((goal, index) => {
             return (
-              <Link to="/edit/:id" className="dropdown-item" key={index}>
+              <Link to="/edit/:id" key={index}>
                 {goal.goalName}
               </Link>
             )
@@ -66,6 +66,9 @@ class Header extends Component {
           </Link>
           <Link to="/choose" className="nav-link">
             Edit Goals
+          </Link>
+          <Link to="/logout" className="nav-link">
+            Sign Out
           </Link>
           {/* <button className="nav-link" onClick={this.callDropdown}>
             Edit Goals

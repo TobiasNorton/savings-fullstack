@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './Header'
 import axios from 'axios'
 import auth from './auth'
+import history from './history'
 
 class NewGoal extends Component {
   componentWillMount() {
@@ -9,6 +10,8 @@ class NewGoal extends Component {
       axios.defaults.headers.common = {
         Authorization: auth.authorizationHeader()
       }
+    } else {
+      history.push('/')
     }
   }
 

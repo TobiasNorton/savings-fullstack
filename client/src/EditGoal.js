@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './Header'
 import axios from 'axios'
 import auth from './auth'
+import history from './history'
 
 class EditGoal extends Component {
   constructor(props) {
@@ -17,6 +18,8 @@ class EditGoal extends Component {
       axios.defaults.headers.common = {
         Authorization: auth.authorizationHeader()
       }
+    } else {
+      history.push('/')
     }
   }
 

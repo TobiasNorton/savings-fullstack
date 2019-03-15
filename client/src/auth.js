@@ -26,7 +26,7 @@ class Auth {
     localStorage.removeItem('id_token')
     localStorage.removeItem('expires_at')
     // navigate to the home route
-    history.replace('/goals')
+    history.replace('/')
   }
   handleAuthentication(callback) {
     this.auth0.parseHash((err, authResult) => {
