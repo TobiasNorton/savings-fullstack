@@ -3,9 +3,7 @@ class GoalsController < ApplicationController
 
   # GET /goals
   def index
-    @goals = Goal.all
-
-    render json: @goals
+    render json: current_user.goals
   end
 
   # GET /goals/1
@@ -15,7 +13,7 @@ class GoalsController < ApplicationController
 
   # POST /goals
   def create
-    @goal = Goal.new(goal_params)
+    @goal = current_user.goals.new(goal_params)
 
     if @goal.save
       render json: @goal, status: :created, location: @goal
@@ -27,9 +25,9 @@ class GoalsController < ApplicationController
   # PATCH/PUT /goals/1
   def update
     if @goal.update(goal_params)
-      render json: @goal
+      render json: current_user.goals
     else
-      render json: @goal.errors, status: :unprocessable_entity
+      render json: current_user.goals.errors, status: :unprocessable_entity
     end
   end
 
@@ -41,7 +39,7 @@ class GoalsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_goal
-      @goal = Goal.find(params[:id])
+      @goal = current_user.goals.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

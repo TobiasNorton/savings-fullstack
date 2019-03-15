@@ -27,15 +27,6 @@ class MyGoals extends Component {
   }
 
   componentDidMount = () => {
-    // axios.get('/api/goals').then(response => {
-    //   console.log(response.data)
-    //   this.setState(
-    //     {
-    //       goals: response.data
-    //     },
-    //     () => console.log(this.state.goals)
-    //   )
-    // })
     this.loadGoals()
   }
 
@@ -80,6 +71,7 @@ class MyGoals extends Component {
   }
 
   deleteGoal = id => {
+    console.log('hello')
     axios.delete(`/api/goals/${id}`).then(response => {
       this.loadGoals()
     })

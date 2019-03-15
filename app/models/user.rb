@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many goals
+  has_many :goals
 
   def self.from_auth_hash(payload)
     User.find_or_create_by(auth_sub: payload["sub"]) do |user|
@@ -17,7 +17,7 @@ class User < ApplicationRecord
       # end
       # This code would store their email address
       # user.email = payload["email"]
-      user.name = payload["name"]
+      # user.name = payload["name"]
     end
   end
 end
