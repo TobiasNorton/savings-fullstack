@@ -53,7 +53,7 @@ class NewGoal extends Component {
             </div>
             <div className="input-container">
               <label>Initial Deposit</label>
-              <input type="number" name="goal[balance]" min="1" max="9999999" />
+              <input className="balance" type="number" name="goal[balance]" min="1" max="9999999" />
             </div>
             {/* <div className="input-container">
               <label>Deadline</label>

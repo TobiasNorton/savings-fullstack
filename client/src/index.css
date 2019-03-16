@@ -219,7 +219,7 @@ td {
 
 .no-goals {
   width: 90vw;
-  max-width: 60rem;
+  max-width: 45rem;
   margin: 0 3rem 0 3rem;
   text-align: center;
   padding: 3rem 0;
@@ -242,8 +242,10 @@ td {
 
 .header {
   font-size: 1.6rem;
+  font-weight: bold;
   text-align: center;
   margin: 3rem;
+  color: hsla(127, 50%, 50%, 1);
 }
 
 .form-header {
@@ -340,6 +342,11 @@ input {
 @media only screen and (max-width: 580px) {
   thead {
     display: none;
+  }
+
+  .no-goals {
+    background-color: white;
+    padding: 1rem;
   }
 
   td {
@@ -480,11 +487,7 @@ input {
 
 @media only screen and (max-width: 340px) {
   input {
-    width: 9rem;
-  }
-
-  .balance {
-    width: 7rem;
+    width: 8.5rem;
   }
 }
 
@@ -495,6 +498,16 @@ input {
   }
 
   .nav-link {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  input {
+    width: 7.5rem;
+  }
+
+  .balance {
+    width: 6rem;
   }
 }

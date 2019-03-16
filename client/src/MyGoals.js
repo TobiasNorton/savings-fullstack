@@ -44,31 +44,31 @@ class MyGoals extends Component {
   //   for
   // }
 
-  displayGoals = () => {
-    return this.state.goals.map((goal, index) => {
-      return (
-        <GoalItem
-          key={index}
-          id={goal.id}
-          name={goal.name}
-          amount={goal.target_amount}
-          balance={goal.balance}
-          date={goal.due_date}
-          deleteGoal={this.deleteGoal}
-          class={this.lastRow}
-        />
-      )
-    })
-  }
+  // displayGoals = () => {
+  //   return this.state.goals.map((goal, index) => {
+  //     return (
+  //       <GoalItem
+  //         key={index}
+  //         id={goal.id}
+  //         name={goal.name}
+  //         amount={goal.target_amount}
+  //         balance={goal.balance}
+  //         date={goal.due_date}
+  //         deleteGoal={this.deleteGoal}
+  //         class={this.lastRow}
+  //       />
+  //     )
+  //   })
+  // }
 
   noGoalsToDisplay = () => {
-    if (this.state.goals.length === 0) {
-      return (
-        <>
-          <div className="no-goals">You have no current goals.</div>
-        </>
-      )
-    }
+    // if (this.state.goals.length === 0) {
+    return (
+      <>
+        <div className="no-goals">You have no current goals.</div>
+      </>
+    )
+    // }
   }
 
   deleteGoal = id => {
@@ -113,7 +113,7 @@ class MyGoals extends Component {
               </tr>
             </thead>
 
-            <tbody>{this.displayGoals()}</tbody>
+            {/* <tbody>{this.displayGoals()}</tbody> */}
             <tfoot />
           </table>
           {this.noGoalsToDisplay()}
