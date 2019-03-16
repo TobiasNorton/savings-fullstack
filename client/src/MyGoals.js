@@ -72,7 +72,6 @@ class MyGoals extends Component {
   }
 
   deleteGoal = id => {
-    console.log('hello')
     axios.delete(`/api/goals/${id}`).then(response => {
       this.loadGoals()
     })

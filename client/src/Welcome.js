@@ -6,7 +6,7 @@ class Welcome extends Component {
     return (
       <div className="welcome">
         <div>
-          <h1 className="title">
+          <h1 className="title landing">
             GreenGoals <i class="fas fa-money-bill-wave" />
           </h1>
           {/* <nav className="nav-bar">
