@@ -75,16 +75,6 @@ class MyGoals extends Component {
     })
   }
 
-  // goalName = () => {
-  //   return this.state.goals.map((goal, index) => {
-  //     return (
-  //       <div>
-  //         <p>{goal.goalName}</p>
-  //       </div>
-  //     )
-  //   })
-  // }
-
   renderLoading = () => {
     return <div className="no-goals">Loading...</div>
   }
@@ -92,12 +82,6 @@ class MyGoals extends Component {
   render() {
     return (
       <div className="my-goals">
-        {/* <h1 className="title">Personal Savings Goals</h1>
-        <nav className="nav-bar">
-          <p>My Goals</p>
-          <p>New Goal</p>
-          <p>Edit Goals</p>
-        </nav> */}
         <Header />
         <section className="goals-list">
           <p className="header">My Goals</p>
@@ -120,24 +104,6 @@ class MyGoals extends Component {
           <Link to="/new" className="create-new">
             Create New Goal
           </Link>
-          {/* <div className="list-container">
-            <div>
-              <p>Goal</p>
-              {this.goalName()}
-            </div>
-            <div>
-              <p>Amount</p>
-              {this.goalAmount()}
-            </div>
-            <div>
-              <p>Current Balance</p>
-              {this.balance()}
-            </div>
-            <div>
-              <p>Date</p>
-              {this.deadline()}
-            </div>
-          </div> */}
         </section>
       </div>
     )

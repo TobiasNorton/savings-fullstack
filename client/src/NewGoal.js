@@ -40,7 +40,7 @@ class NewGoal extends Component {
           <form className="new-goal" onSubmit={this.createGoal}>
             <div className="input-container">
               <label>Goal Name</label>
-              <input type="text" name="goal[name]" maxLength="18" autoComplete="off" />
+              <input type="text" name="goal[name]" maxLength="20" autoComplete="off" />
             </div>
             <div className="input-container">
               <label>Amount</label>

@@ -216,14 +216,7 @@ em {
   justify-content: center;
   align-items: center;
   width: 4rem;
-  /* height: 2rem; */
 }
-
-/* td.buttons-cell */
-/* .buttons-cell {
-  padding: 0 1rem;
-  width: 7rem;
-} */
 
 .no-goals {
   width: 90vw;
@@ -274,6 +267,7 @@ form {
   background-color: hsla(127, 50%, 80%, 1);
   max-width: 30rem;
   margin: 0 auto;
+  margin-bottom: 6rem;
   padding: 1.2rem;
   border-radius: 0px 0px 10px 10px;
 }
@@ -308,6 +302,9 @@ input {
   background-color: hsl(200, 100%, 60%);
   /* background-color: hsla(208, 63%, 45%, 1); */
   border: none;
+}
+
+.no-choose {
 }
 
 .edit-goals-container {
@@ -349,6 +346,10 @@ input {
 
 /* @media only screen and (max-width: 580px) { */
 @media only screen and (max-width: 650px) {
+  .header {
+    margin: 2rem;
+  }
+
   thead {
     display: none;
   }
@@ -462,6 +463,10 @@ input {
   .balance {
     width: 8rem;
   }
+
+  .tagline {
+    margin-top: 10rem;
+  }
 }
 
 @media only screen and (max-width: 380px) {
@@ -511,6 +516,10 @@ input {
   input {
     width: 8.5rem;
   }
+
+  .balance {
+    width: 6.5rem;
+  }
 }
 
 @media only screen and (max-width: 330px) {
@@ -522,14 +531,13 @@ input {
   .nav-link {
     font-size: 0.9rem;
   }
-}
 
-@media only screen and (max-width: 330px) {
   input {
-    width: 7.5rem;
+    width: 8rem;
   }
 
-  .balance {
+  .list-buttons button,
+  .edit-button {
     width: 6rem;
   }
 }

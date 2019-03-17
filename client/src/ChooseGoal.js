@@ -34,20 +34,31 @@ class ChooseGoal extends Component {
   }
 
   showGoals = () => {
-    return this.state.goals.map((goal, index) => {
+    if (this.state.goals.length !== 0) {
+      return this.state.goals.map((goal, index) => {
+        return (
+          <Link to={`/edit/${goal.id}`} key={index} className="edit-list-item">
+            {goal.name} - ${goal.target_amount}.00
+          </Link>
+        )
+      })
+    } else {
       return (
-        <Link to={`/edit/${goal.id}`} key={index} className="edit-list-item">
-          {goal.name} - ${goal.target_amount}.00
-        </Link>
+        <>
+          <p>You have no current goals.</p>
+          <Link to="/new" className="create-new">
+            Create New Goal
+          </Link>
+        </>
       )
-    })
+    }
   }
 
   render() {
     return (
       <>
         <Header />
-        <p className="header">Choose a Goal to Edit</p>
+        <p className="header">{this.state.goals.length !== 0 ? 'Choose a Goal to Edit' : ''}</p>
         <div className="edit-goals-container">{this.showGoals()}</div>
       </>
     )
