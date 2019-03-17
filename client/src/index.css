@@ -163,12 +163,20 @@ th {
   text-align: left;
 }
 
+.mobile-row {
+  display: none;
+}
+
 td {
   color: black;
   background-color: hsla(211, 30%, 10%, 1);
   background-color: hsla(208, 63%, 60%, 1);
   background-color: hsla(127, 50%, 80%, 1);
   padding: 1rem 1rem 1rem 1.2rem;
+}
+
+em {
+  display: none;
 }
 
 .list-buttons {
@@ -339,9 +347,19 @@ input {
   border-radius: 5px;
 } */
 
-@media only screen and (max-width: 580px) {
+/* @media only screen and (max-width: 580px) { */
+@media only screen and (max-width: 650px) {
   thead {
     display: none;
+  }
+
+  .desktop-row {
+    display: none;
+  }
+
+  .mobile-row {
+    display: block;
+    text-align: center;
   }
 
   .no-goals {
@@ -354,6 +372,10 @@ input {
     flex-direction: column;
     align-items: center;
     margin-bottom: 3px;
+  }
+
+  em {
+    display: inline;
   }
 
   .td-mobile {

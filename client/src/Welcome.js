@@ -7,7 +7,7 @@ class Welcome extends Component {
       <div className="welcome">
         <div>
           <h1 className="title landing">
-            GreenGoals <i class="fas fa-money-bill-wave" />
+            GreenGoals <i className="fas fa-money-bill-wave" />
           </h1>
           {/* <nav className="nav-bar">
             <p>My Goals</p>

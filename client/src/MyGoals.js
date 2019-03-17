@@ -11,9 +11,7 @@ class MyGoals extends Component {
     super(props)
 
     this.state = {
-      goals: [],
-      lastRow: false,
-      loading: true
+      goals: []
     }
   }
 
@@ -31,6 +29,11 @@ class MyGoals extends Component {
     this.loadGoals()
   }
 
+  percentage = (balance, amount) => {
+    let float = balance / amount
+    return `${float.toFixed(2) * 100}`
+  }
+
   loadGoals = () => {
     axios.get('/api/goals').then(response => {
       this.setState({
@@ -39,36 +42,31 @@ class MyGoals extends Component {
     })
   }
 
-  // lastRow = () => {
-  //   let goals = this.state.goals
-  //   for
-  // }
-
-  // displayGoals = () => {
-  //   return this.state.goals.map((goal, index) => {
-  //     return (
-  //       <GoalItem
-  //         key={index}
-  //         id={goal.id}
-  //         name={goal.name}
-  //         amount={goal.target_amount}
-  //         balance={goal.balance}
-  //         date={goal.due_date}
-  //         deleteGoal={this.deleteGoal}
-  //         class={this.lastRow}
-  //       />
-  //     )
-  //   })
-  // }
+  displayGoals = () => {
+    return this.state.goals.map((goal, index) => {
+      return (
+        <GoalItem
+          key={index}
+          id={goal.id}
+          name={goal.name}
+          amount={goal.target_amount}
+          balance={goal.balance}
+          date={goal.due_date}
+          deleteGoal={this.deleteGoal}
+          percentage={this.percentage}
+        />
+      )
+    })
+  }
 
   noGoalsToDisplay = () => {
-    // if (this.state.goals.length === 0) {
-    return (
-      <>
-        <div className="no-goals">You have no current goals.</div>
-      </>
-    )
-    // }
+    if (this.state.goals.length === 0) {
+      return (
+        <>
+          <div className="no-goals">You have no current goals.</div>
+        </>
+      )
+    }
   }
 
   deleteGoal = id => {
@@ -109,11 +107,12 @@ class MyGoals extends Component {
                 <th className="top-left">Goal</th>
                 <th>Amount</th>
                 <th>Current Balance</th>
+                <th>%</th>
                 <th className="top-right" />
               </tr>
             </thead>
 
-            {/* <tbody>{this.displayGoals()}</tbody> */}
+            <tbody>{this.displayGoals()}</tbody>
             <tfoot />
           </table>
           {this.noGoalsToDisplay()}
