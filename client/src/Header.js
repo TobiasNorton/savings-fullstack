@@ -53,6 +53,7 @@ class Header extends Component {
 
   render() {
     return (
+      // <div className="nav-header">
       <div>
         <h1 className="title">
           GreenGoals <i className="fas fa-money-bill-wave" />
