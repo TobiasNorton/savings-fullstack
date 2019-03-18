@@ -16,7 +16,13 @@ class App extends Component {
     return (
       <Router history={history}>
         <>
-          <Route path="/login" render={() => auth.login()} />
+          <Route
+            path="/login"
+            render={() => {
+              auth.login()
+              return <></>
+            }}
+          />
           <Route
             path="/logout"
             render={() => {

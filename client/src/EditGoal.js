@@ -38,13 +38,10 @@ class EditGoal extends Component {
       console.log(pair[0] + ', ' + pair[1])
     }
 
-    axios.put(`/api/goals/${this.state.currentGoal.id}`, formData).then(
-      response => {
-        // window.location = '/goals'
-        //history.push('/goals')
-      },
-      () => history.push('/goals')
-    )
+    axios.put(`/api/goals/${this.state.currentGoal.id}`, formData).then(response => {
+      // window.location = '/goals'
+      history.push('/goals')
+    })
   }
 
   render() {
