@@ -11,7 +11,8 @@ class MyGoals extends Component {
     super(props)
 
     this.state = {
-      goals: []
+      goals: [],
+      isLoading: true
     }
   }
 
@@ -37,7 +38,8 @@ class MyGoals extends Component {
   loadGoals = () => {
     axios.get('/api/goals').then(response => {
       this.setState({
-        goals: response.data
+        goals: response.data,
+        isLoading: false
       })
     })
   }
@@ -60,7 +62,7 @@ class MyGoals extends Component {
   }
 
   noGoalsToDisplay = () => {
-    if (this.state.goals.length === 0) {
+    if (this.state.goals.length === 0 && !this.state.isLoading) {
       return (
         <>
           <div className="no-goals">You have no current goals.</div>
@@ -75,14 +77,53 @@ class MyGoals extends Component {
     })
   }
 
-  renderLoading = () => {
-    return <div className="no-goals">Loading...</div>
-  }
+  // isLoading = () => {
+  //   if (this.state.isLoading) {
+  //     return (
+  //       <div class="sk-circle">
+  //         <div class="sk-circle1 sk-child" />
+  //         <div class="sk-circle2 sk-child" />
+  //         <div class="sk-circle3 sk-child" />
+  //         <div class="sk-circle4 sk-child" />
+  //         <div class="sk-circle5 sk-child" />
+  //         <div class="sk-circle6 sk-child" />
+  //         <div class="sk-circle7 sk-child" />
+  //         <div class="sk-circle8 sk-child" />
+  //         <div class="sk-circle9 sk-child" />
+  //         <div class="sk-circle10 sk-child" />
+  //         <div class="sk-circle11 sk-child" />
+  //         <div class="sk-circle12 sk-child" />
+  //       </div>
+  //     )
+  //   }
+  // }
 
   render() {
+    if (this.state.isLoading) {
+      return (
+        <>
+          <Header />
+          <div class="sk-circle">
+            <div class="sk-circle1 sk-child" />
+            <div class="sk-circle2 sk-child" />
+            <div class="sk-circle3 sk-child" />
+            <div class="sk-circle4 sk-child" />
+            <div class="sk-circle5 sk-child" />
+            <div class="sk-circle6 sk-child" />
+            <div class="sk-circle7 sk-child" />
+            <div class="sk-circle8 sk-child" />
+            <div class="sk-circle9 sk-child" />
+            <div class="sk-circle10 sk-child" />
+            <div class="sk-circle11 sk-child" />
+            <div class="sk-circle12 sk-child" />
+          </div>
+        </>
+      )
+    }
     return (
       <div className="my-goals">
         <Header />
+        {/* <div>{this.isLoading()}</div> */}
         <section className="goals-list">
           <p className="header">My Goals</p>
           <table className="table">

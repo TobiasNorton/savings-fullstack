@@ -10,8 +10,8 @@ class ChooseGoal extends Component {
     super(props)
 
     this.state = {
-      //data
-      goals: []
+      goals: [],
+      loading: true
     }
   }
 
@@ -28,13 +28,14 @@ class ChooseGoal extends Component {
   componentDidMount = () => {
     axios.get(`/api/goals`).then(response => {
       this.setState({
-        goals: response.data
+        goals: response.data,
+        loading: false
       })
     })
   }
 
   showGoals = () => {
-    if (this.state.goals.length !== 0) {
+    if (this.state.goals !== 0) {
       return this.state.goals.map((goal, index) => {
         return (
           <Link to={`/edit/${goal.id}`} key={index} className="edit-list-item">
@@ -54,11 +55,34 @@ class ChooseGoal extends Component {
     }
   }
 
+  loading = () => {
+    if (this.state.loading && this.state.goals.length === 0) {
+      return (
+        <div class="sk-circle">
+          <div class="sk-circle1 sk-child" />
+          <div class="sk-circle2 sk-child" />
+          <div class="sk-circle3 sk-child" />
+          <div class="sk-circle4 sk-child" />
+          <div class="sk-circle5 sk-child" />
+          <div class="sk-circle6 sk-child" />
+          <div class="sk-circle7 sk-child" />
+          <div class="sk-circle8 sk-child" />
+          <div class="sk-circle9 sk-child" />
+          <div class="sk-circle10 sk-child" />
+          <div class="sk-circle11 sk-child" />
+          <div class="sk-circle12 sk-child" />
+        </div>
+      )
+    }
+  }
+
   render() {
     return (
       <>
         <Header />
-        <p className="header">{this.state.goals.length !== 0 ? 'Choose a Goal to Edit' : ''}</p>
+        <p className="header">{!this.state.loading ? 'Choose a Goal to Edit' : ''}</p>
+        {/* <p>{this.state.loading ? 'Loading...' : ''}</p> */}
+        <div>{this.loading()}</div>
         <div className="edit-goals-container">{this.showGoals()}</div>
       </>
     )
