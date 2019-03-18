@@ -639,12 +639,22 @@ input {
     width: 8rem;
   }
 
+  .list-buttons {
+    width: 14rem;
+  }
+
   .list-buttons button,
   .edit-button {
     width: 6rem;
   }
+
   .title {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  table {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
