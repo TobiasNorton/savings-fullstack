@@ -490,10 +490,6 @@ input {
     margin-bottom: 3px;
   }
 
-  .td-mobile {
-    display: inline;
-  }
-
   .name {
     border-radius: 10px 10px 0 0;
     color: white;
@@ -567,8 +563,8 @@ input {
 }
 
 @media only screen and (max-width: 400px) {
-  .balance {
-    width: 8rem;
+  input {
+    width: 9rem;
   }
 
   .tagline {
@@ -593,6 +589,10 @@ input {
 @media only screen and (max-width: 370px) {
   .edit-list-item {
     width: 85%;
+  }
+
+  input {
+    width: 8rem;
   }
 }
 
@@ -620,12 +620,8 @@ input {
 }
 
 @media only screen and (max-width: 340px) {
-  input {
-    width: 8.5rem;
-  }
-
-  .balance {
-    width: 6.5rem;
+  input[type='number'] {
+    width: 6rem;
   }
 }
 
