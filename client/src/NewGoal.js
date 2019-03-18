@@ -24,10 +24,8 @@ class NewGoal extends Component {
     }
 
     axios.post('/api/goals', formData).then(response => {
-      form.reset()
+      window.location = '/goals'
     })
-
-    window.location = '/goals'
   }
 
   render() {

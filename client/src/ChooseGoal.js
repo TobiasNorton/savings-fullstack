@@ -35,7 +35,7 @@ class ChooseGoal extends Component {
   }
 
   showGoals = () => {
-    if (this.state.goals !== 0) {
+    if (this.state.goals.length !== 0) {
       return this.state.goals.map((goal, index) => {
         return (
           <Link to={`/edit/${goal.id}`} key={index} className="edit-list-item">
@@ -43,7 +43,7 @@ class ChooseGoal extends Component {
           </Link>
         )
       })
-    } else {
+    } else if (this.state.goals.length === 0 && !this.state.loading) {
       return (
         <>
           <p>You have no current goals.</p>
@@ -56,7 +56,7 @@ class ChooseGoal extends Component {
   }
 
   loading = () => {
-    if (this.state.loading && this.state.goals.length === 0) {
+    if (this.state.loading) {
       return (
         <div class="sk-circle">
           <div class="sk-circle1 sk-child" />
