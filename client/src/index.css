@@ -63,7 +63,7 @@ code {
 
 .login-area {
   background: linear-gradient(hsla(185, 0%, 0%, 0.3), hsla(185, 0%, 0%, 0.3)),
-    url('./andre-hunter-62014-unsplash.jpg');
+    url('./Assets/andre-hunter-62014-unsplash.jpg');
   background-size: cover;
   background-position: 50% 25%;
   height: calc(100vh - 5rem);
@@ -116,6 +116,11 @@ footer {
   bottom: 0;
   width: 100vw;
 }
+
+/* .stick {
+  position: sticky;
+  bottom: 0;
+} */
 
 .hidden {
   display: none;
@@ -554,6 +559,10 @@ input {
   .login-area {
     height: calc(100vh - 6rem);
   }
+
+  .goals-list {
+    min-height: calc(100vh - 12.6rem);
+  }
 }
 
 @media only screen and (max-width: 420px) {
@@ -576,6 +585,10 @@ input {
 
   footer {
     padding: 0.8rem;
+  }
+
+  .goals-list {
+    min-height: calc(100vh - 11.7rem);
   }
 }
 
@@ -634,6 +647,10 @@ input {
   .login-button {
     width: 6rem;
   }
+
+  .goals-list {
+    min-height: calc(100vh - 10.5rem);
+  }
 }
 
 @media only screen and (max-width: 340px) {
@@ -673,5 +690,9 @@ input {
   table {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .goals-list {
+    min-height: calc(100vh - 10rem);
   }
 }
