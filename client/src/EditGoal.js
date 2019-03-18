@@ -66,6 +66,8 @@ class EditGoal extends Component {
               <input
                 type="number"
                 name="goal[target_amount]"
+                min="1"
+                max="999999"
                 defaultValue={this.state.currentGoal.target_amount}
               />
             </div>
@@ -75,6 +77,8 @@ class EditGoal extends Component {
                 className="balance"
                 type="number"
                 name="goal[balance]"
+                min="1"
+                max="999999"
                 defaultValue={this.state.currentGoal.balance}
               />
             </div>

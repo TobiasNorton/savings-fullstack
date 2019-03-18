@@ -266,10 +266,14 @@ code {
 
 .table {
   width: 90vw;
-  max-width: 45rem;
+  max-width: 48rem;
   margin: 0 3rem 0 3rem;
   border-collapse: separate;
   border-spacing: 0px 3px;
+}
+
+.name {
+  padding-left: 1.5rem;
 }
 
 .top-left {
@@ -283,7 +287,7 @@ code {
 th {
   color: white;
   background-color: hsla(127, 50%, 50%, 1);
-  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+  padding: 0.8rem 0.8rem 0.8rem 1.5rem;
   text-align: left;
 }
 
@@ -297,6 +301,11 @@ td {
   color: black;
   background-color: hsla(127, 50%, 80%, 1);
   padding: 1rem 1rem 1rem 1.2rem;
+}
+
+.buttons-cell {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 
 .list-buttons {
@@ -440,7 +449,7 @@ input {
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .header {
     margin: 2rem;
   }
@@ -468,10 +477,6 @@ input {
     flex-direction: column;
     align-items: center;
     margin-bottom: 3px;
-  }
-
-  em {
-    display: inline;
   }
 
   .td-mobile {
