@@ -40,6 +40,7 @@ class EditGoal extends Component {
 
     axios.put(`/api/goals/${this.state.currentGoal.id}`, formData).then(response => {
       // window.location = '/goals'
+      history.push('/goals')
     })
   }
 
