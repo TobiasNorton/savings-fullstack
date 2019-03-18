@@ -289,7 +289,7 @@ th {
 
 /* ----------- GoalItem --------------- */
 
-.mobile-row {
+.mobile-cell {
   display: none;
 }
 
@@ -449,11 +449,11 @@ input {
     display: none;
   }
 
-  .desktop-row {
+  .desktop-cell {
     display: none;
   }
 
-  .mobile-row {
+  .mobile-cell {
     display: block;
     text-align: center;
   }

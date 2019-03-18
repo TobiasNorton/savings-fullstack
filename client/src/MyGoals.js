@@ -32,7 +32,7 @@ class MyGoals extends Component {
 
   percentage = (balance, amount) => {
     let float = balance / amount
-    return `${float.toFixed(2) * 100}`
+    return `${Math.floor(float.toFixed(2) * 100)}`
   }
 
   loadGoals = () => {
