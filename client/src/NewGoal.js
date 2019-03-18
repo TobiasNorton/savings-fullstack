@@ -35,7 +35,6 @@ class NewGoal extends Component {
       <div>
         <Header />
         <section>
-          {/* <p className="header">Create a New Goal</p> */}
           <p className="form-header">Create a New Goal</p>
           <form className="new-goal" onSubmit={this.createGoal}>
             <div className="input-container">
@@ -44,21 +43,12 @@ class NewGoal extends Component {
             </div>
             <div className="input-container">
               <label>Amount</label>
-              {/* <div className="currency">
-                <p>$</p>
-                <input type="number" name="goal[target_amount]" min="1" max="9999999" />
-                <p>.00</p>
-              </div> */}
               <input type="number" name="goal[target_amount]" min="1" max="9999999" />
             </div>
             <div className="input-container">
               <label>Initial Deposit</label>
               <input className="balance" type="number" name="goal[balance]" min="1" max="9999999" />
             </div>
-            {/* <div className="input-container">
-              <label>Deadline</label>
-              <input type="date" name="goal[due_date]" />
-            </div> */}
             <button type="submit" className="submit">
               Submit
             </button>

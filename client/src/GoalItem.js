@@ -21,15 +21,12 @@ class GoalItem extends Component {
         <td className="mobile-row">Balance: ${this.props.balance}.00</td>
         <td className="mobile-row">{this.progress()}% complete</td>
 
-        {/* <td>{this.props.date}</td> */}
         <td className="buttons-cell">
           <div className="list-buttons">
             <Link to={`/edit/${this.props.id}`} className="edit-button">
               Edit
             </Link>
-            {/* <button onClick={this.goToEdit}>Edit</button> */}
             <button onClick={this.delete}>Delete</button>
-            {/* <button onClick={() => this.deleteGoal(goal)}>Delete</button> */}
           </div>
         </td>
       </tr>

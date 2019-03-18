@@ -25,12 +25,9 @@ class EditGoal extends Component {
 
   componentDidMount = () => {
     axios.get(`/api/goals/${this.props.match.params.id}`).then(response => {
-      this.setState(
-        {
-          currentGoal: response.data
-        },
-        () => console.log(this.state.currentGoal)
-      )
+      this.setState({
+        currentGoal: response.data
+      })
     })
   }
 
@@ -52,7 +49,6 @@ class EditGoal extends Component {
         <Header />
 
         <section>
-          {/* <p className="header">Edit Your Goal</p> */}
           <p className="form-header">Edit Your Goal</p>
           <form className="new-goal" onSubmit={this.editGoal}>
             <div className="input-container">
@@ -82,14 +78,6 @@ class EditGoal extends Component {
                 defaultValue={this.state.currentGoal.balance}
               />
             </div>
-            {/* <div className="input-container">
-              <label>Deadline</label>
-              <input
-                type="date"
-                name="goal[due_date]"
-                defaultValue={this.state.currentGoal.due_date}
-              />
-            </div> */}
             <button type="submit" className="submit">
               Submit
             </button>

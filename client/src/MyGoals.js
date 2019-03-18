@@ -77,27 +77,6 @@ class MyGoals extends Component {
     })
   }
 
-  // isLoading = () => {
-  //   if (this.state.isLoading) {
-  //     return (
-  //       <div class="sk-circle">
-  //         <div class="sk-circle1 sk-child" />
-  //         <div class="sk-circle2 sk-child" />
-  //         <div class="sk-circle3 sk-child" />
-  //         <div class="sk-circle4 sk-child" />
-  //         <div class="sk-circle5 sk-child" />
-  //         <div class="sk-circle6 sk-child" />
-  //         <div class="sk-circle7 sk-child" />
-  //         <div class="sk-circle8 sk-child" />
-  //         <div class="sk-circle9 sk-child" />
-  //         <div class="sk-circle10 sk-child" />
-  //         <div class="sk-circle11 sk-child" />
-  //         <div class="sk-circle12 sk-child" />
-  //       </div>
-  //     )
-  //   }
-  // }
-
   render() {
     if (this.state.isLoading) {
       return (
@@ -123,7 +102,6 @@ class MyGoals extends Component {
     return (
       <div>
         <Header />
-        {/* <div>{this.isLoading()}</div> */}
         <section className="goals-list">
           <p className="header">My Goals</p>
           <table className="table">
@@ -141,7 +119,6 @@ class MyGoals extends Component {
             <tfoot />
           </table>
           {this.noGoalsToDisplay()}
-          {/* <button className="create-new">Create New Goal</button> */}
           <Link to="/new" className="create-new">
             Create New Goal
           </Link>

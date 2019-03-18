@@ -81,7 +81,6 @@ class ChooseGoal extends Component {
       <>
         <Header />
         <p className="header">{!this.state.loading ? 'Choose a Goal to Edit' : ''}</p>
-        {/* <p>{this.state.loading ? 'Loading...' : ''}</p> */}
         <div>{this.loading()}</div>
         <div className="edit-goals-container">{this.showGoals()}</div>
       </>

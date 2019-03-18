@@ -8,8 +8,6 @@ class Header extends Component {
     super(props)
 
     this.state = {
-      dropdown: false,
-      //data
       goals: []
     }
   }
@@ -53,7 +51,6 @@ class Header extends Component {
 
   render() {
     return (
-      // <div className="nav-header">
       <div>
         <h1 className="title">
           GreenGoals <i className="fas fa-money-bill-wave" />
@@ -71,11 +68,7 @@ class Header extends Component {
           <Link to="/logout" className="nav-link">
             Sign Out
           </Link>
-          {/* <button className="nav-link" onClick={this.callDropdown}>
-            Edit Goals
-          </button> */}
         </nav>
-        {/* {this.dropdown()} */}
       </div>
     )
   }
