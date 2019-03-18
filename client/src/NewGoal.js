@@ -23,10 +23,12 @@ class NewGoal extends Component {
       console.log(pair[0] + ', ' + pair[1])
     }
 
-    axios.post('/api/goals', formData).then(response => {
-      // window.location = '/goals'
-      history.push('/goals')
-    })
+    axios.post('/api/goals', formData).then(
+      response => {
+        // window.location = '/goals'
+      },
+      () => history.push('/goals')
+    )
   }
 
   render() {
