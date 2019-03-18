@@ -24,7 +24,7 @@ class Welcome extends Component {
             </div>
           </div>
         </section>
-        <footer className="fixed hidden">GreenGoals © 2019</footer>
+        <footer className="welcome-fixed hidden">GreenGoals © 2019</footer>
       </div>
     )
   }

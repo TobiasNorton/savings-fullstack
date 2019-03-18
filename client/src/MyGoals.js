@@ -123,7 +123,7 @@ class MyGoals extends Component {
             Create New Goal
           </Link>
         </section>
-        <footer className="stick">GreenGoals © 2019</footer>
+        <footer className="my-goals-footer">GreenGoals © 2019</footer>
       </div>
     )
   }

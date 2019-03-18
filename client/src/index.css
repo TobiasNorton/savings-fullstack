@@ -111,16 +111,12 @@ footer {
   text-align: center;
 }
 
+.welcome-fixed,
 .fixed {
   position: fixed;
   bottom: 0;
   width: 100vw;
 }
-
-/* .stick {
-  position: sticky;
-  bottom: 0;
-} */
 
 .hidden {
   display: none;
@@ -562,6 +558,11 @@ input {
 
   .goals-list {
     min-height: calc(100vh - 12.6rem);
+  }
+
+  .my-goals-footer,
+  .fixed {
+    display: none;
   }
 }
 
