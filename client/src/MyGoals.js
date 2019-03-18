@@ -121,7 +121,7 @@ class MyGoals extends Component {
       )
     }
     return (
-      <div className="my-goals">
+      <div>
         <Header />
         {/* <div>{this.isLoading()}</div> */}
         <section className="goals-list">
