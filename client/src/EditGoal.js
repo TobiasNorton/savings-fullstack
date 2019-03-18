@@ -34,12 +34,8 @@ class EditGoal extends Component {
   editGoal = event => {
     event.preventDefault()
     let formData = new FormData(event.target)
-    for (let pair of formData.entries()) {
-      console.log(pair[0] + ', ' + pair[1])
-    }
 
     axios.put(`/api/goals/${this.state.currentGoal.id}`, formData).then(response => {
-      // window.location = '/goals'
       history.push('/goals')
     })
   }
