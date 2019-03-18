@@ -31,7 +31,7 @@ class NewGoal extends Component {
         <Header />
         <section>
           <p className="form-header">Create a New Goal</p>
-          <form className="new-goal" onSubmit={this.createGoal}>
+          <form onSubmit={this.createGoal}>
             <div className="input-container">
               <label>Goal Name</label>
               <input type="text" name="goal[name]" maxLength="20" autoComplete="off" />
@@ -49,6 +49,7 @@ class NewGoal extends Component {
             </button>
           </form>
         </section>
+        <footer className="fixed">GreenGoals © 2019</footer>
       </div>
     )
   }

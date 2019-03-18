@@ -66,9 +66,8 @@ code {
     url('./andre-hunter-62014-unsplash.jpg');
   background-size: cover;
   background-position: 50% 25%;
-  /* Sans footer height
-  height: calc(100vh - 5rem); */
-  height: calc(100vh - 10.2rem);
+  height: calc(100vh - 5rem);
+  /* height: calc(100vh - 10.2rem); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,6 +109,16 @@ footer {
   padding: 1rem;
   font-size: 0.8rem;
   text-align: center;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.hidden {
+  display: none;
 }
 
 /* -------------- Loading Icon ------------ */
@@ -271,7 +280,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
+  min-height: calc(100vh - 14.3rem);
 }
 
 .table {
@@ -405,7 +414,6 @@ form {
   background-color: hsla(127, 50%, 80%, 1);
   max-width: 30rem;
   margin: 0 auto;
-  margin-bottom: 6rem;
   padding: 1.2rem;
   border-radius: 0px 0px 10px 10px;
 }
@@ -445,7 +453,6 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 6rem;
 }
 
 .edit-list-item {
@@ -458,6 +465,12 @@ input {
   padding: 0.7rem;
   margin-bottom: 5px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 770px) {
+  .hidden {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 690px) {
@@ -559,6 +572,10 @@ input {
 
   input {
     width: 10rem;
+  }
+
+  footer {
+    padding: 0.8rem;
   }
 }
 

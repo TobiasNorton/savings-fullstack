@@ -83,6 +83,7 @@ class ChooseGoal extends Component {
         <p className="header">{!this.state.loading ? 'Choose a Goal to Edit' : ''}</p>
         <div>{this.loading()}</div>
         <div className="edit-goals-container">{this.showGoals()}</div>
+        <footer className="fixed">GreenGoals © 2019</footer>
       </>
     )
   }

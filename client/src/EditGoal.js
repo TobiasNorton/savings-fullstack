@@ -47,7 +47,7 @@ class EditGoal extends Component {
 
         <section>
           <p className="form-header">Edit Your Goal</p>
-          <form className="new-goal" onSubmit={this.editGoal}>
+          <form onSubmit={this.editGoal}>
             <div className="input-container">
               <label>Goal Name</label>
               <input
@@ -84,6 +84,7 @@ class EditGoal extends Component {
             </button>
           </form>
         </section>
+        <footer className="fixed">GreenGoals © 2019</footer>
       </div>
     )
   }
