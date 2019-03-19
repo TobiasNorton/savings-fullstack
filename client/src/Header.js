@@ -20,35 +20,6 @@ class Header extends Component {
     }
   }
 
-  callDropdown = () => {
-    if (!this.state.dropdown) {
-      this.setState({
-        dropdown: true
-      })
-    } else {
-      this.setState({
-        dropdown: false
-      })
-    }
-    console.log(this.state.dropdown)
-  }
-
-  dropdown = () => {
-    if (this.state.dropdown === true) {
-      return (
-        <div className="dropdown">
-          {this.state.goals.map((goal, index) => {
-            return (
-              <Link to="/edit/:id" key={index}>
-                {goal.goalName}
-              </Link>
-            )
-          })}
-        </div>
-      )
-    }
-  }
-
   render() {
     return (
       <div>

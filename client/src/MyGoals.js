@@ -99,6 +99,7 @@ class MyGoals extends Component {
         </>
       )
     }
+
     return (
       <div>
         <Header />
@@ -114,7 +115,6 @@ class MyGoals extends Component {
                 <th className="top-right" />
               </tr>
             </thead>
-
             <tbody>{this.displayGoals()}</tbody>
             <tfoot />
           </table>
