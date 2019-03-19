@@ -698,3 +698,33 @@ input {
     min-height: calc(100vh - 10rem);
   }
 }
+
+@media only screen and (max-height: 540px) {
+  .tagline {
+    margin-top: 6rem;
+  }
+}
+
+@media only screen and (max-height: 450px) {
+  .tagline {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-height: 360px) {
+  .tagline {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    padding: 0.7rem;
+  }
+}
