@@ -49,7 +49,7 @@ class NewGoal extends Component {
             </button>
           </form>
         </section>
-        <footer className="fixed">GreenGoals © 2019</footer>
+        <footer className="fixed">© GreenGoals 2019</footer>
       </div>
     )
   }
