@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Header from './Header'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import auth from './auth'
-import history from './history'
+import auth from '../auth'
+import history from '../history'
 
 class ChooseGoal extends Component {
   constructor(props) {

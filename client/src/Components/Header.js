@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import auth from './auth'
+import auth from '../auth'
 import axios from 'axios'
 
 class Header extends Component {
